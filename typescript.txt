@@ -1,0 +1,71 @@
+In this we will learn how to use typescript which acts as a superscript of javascript. In javascript, it interface the given file but here it first compiles the file 
+and then it checks for any error in a given file. This additional feature of typescript may help in reducing the proning of errors. 
+To achieve this first we need to download the typescript to our visual studio code, here we get two options wheather to download globally or specific to that file.
+Based on our preference we can give the suitable command in our terminal.
+after that we have to create tsconfig.json file. This file is mainly important to tell the javascript where the source files are present and where the target folder should
+be placed along with we can give based on which type we have to compile the given typescipt file.The command used to compile the typescipt file is tsc
+Then we can give additional attributes into that file. We can understand much about that if we see the files in github repository. 
+
+Then after that typescript may show error for $ symbol which belongs to the jquery. We can avoid that by installing type dependencies present in npm documented website.
+There we have to type @type jquery. Then it shows the suitable command which can be used inorder to download the respective package into our working directory.
+
+Then at the same time we can also specify the javascript by writing the code inbetween comments like as shown below
+/* @param number*/
+like this we can prespecify the parameter type which we need.
+
+In chapter 2. 
+We will understand more indepth concepts regarding the typescript like how we can prespecify the variables in javascript so that it inference when we hover over that 
+variable. This can be achieved by typing the code as shown below let variable_name = number
+suppose if we want some variable to be initialised any things that we need then we can specify any after that equals operator like let variable_name = any
+else if want to change type of any variable, then we can do by this way. let variable_name = "yepp" as any. So, this changes the type of it storage to any type even if 
+it is prespecified to specific type.
+
+We can also create the interface in the file. Here, in order to create the interface we will be using the word interface similar to the function as shown below
+interface contact{
+	id:number
+	name:string
+	dateofbirth:date //if we mention that it is not a must field then dateofbirth?:date this how it can be represented
+}
+
+then we can use this interface for any variables which we need
+
+let primarycontact : contact={
+	id:12345,
+	name:"not what you need",
+	dateofbirth= new date("12-03-1993")
+}
+
+We can use two interface where one interface can extend the other.
+for example, interface interface1_name extends interface2_name{
+}
+
+type aliases
+
+type ContactName = string
+
+we can also use enum like 
+enum contactStatus{
+	Active="active",
+	Inactive="inactive",
+	new="new"
+}
+
+if there are two or more generic types present in as a function parameter then we have to mention it while calling that function but this is not necessary
+when the function is having only one parameter in the function.
+Then we have to go through the usage of enum,type which can be used instead of enum, then we can also use interface, interface can also extend other 
+interface. get to know about the question mark beside the variable. Then understand the usage of generic types which are very essential when dealing with
+some of the generic types.
+Know the usage of pipeline operator and ampersand operator. |, & where |, this can be used inorder to use any type of datatypes. &, can be used to extend
+two interface for a new variable.Keyof word is used when we want to only variables or attributes of particular class or interface has to be shown.
+
+Get to know about the partial and omit properties which can be used to partially implement the interface with only parameters we need and omit property is
+used when we don't need certain properties to be included after initialising the interface.
+required and pick type, here required is used to mention that every property is required whereas pick is used only when we have to mention certain 
+propeties have to be included.
+
+learn about the decorators and before using them make sure u given that as true in tsconfig by typing the variable name as experimentalDecorators and at 
+same time we can have metadata in our code which can be enabled by giving it true for the variable emitDecoratorMetadata as true.After that install the 
+metadata file in command prompt by typing the command as "npm -i reflect-metadata --save"
+
+get to know about the filename.d.ts where the typescript searches for the definition. Here we can implement anything and export them. 
+Once go throught the codes present in the github.
